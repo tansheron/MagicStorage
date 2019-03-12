@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="fNbt, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\fNbt.0.6.4\lib\net35-client\fNbt.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeAnalysis">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\Microsoft.CodeAnalysis.dll</HintPath>
     </Reference>
@@ -63,12 +59,9 @@
     <Reference Include="Mono.Cecil.Pdb">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="ReLogic">
       <HintPath>References\ReLogic.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="RoslynWrapper">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\RoslynWrapper.dll</HintPath>
@@ -87,9 +80,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="Terraria">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="TerrariaHooks">
       <HintPath>lib\TerrariaHooks.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>

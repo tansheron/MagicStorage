@@ -5,4 +5,5 @@ homepage = https://forums.terraria.org/index.php?threads/magic-storage.56294/
 hideCode = false
 hideResources = false
 includeSource = true
-buildIgnore = OldArt\*, .git\*
+buildIgnore = OldArt\*, .git\*, lib\Mono.Cecil.dll, lib\TerrariaHooks.dll, References\*, packages.config
+modReferences = TerrariaHooks

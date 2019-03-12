@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
+using MonoMod.ModInterop;
 
 namespace MagicStorage
 {
@@ -24,6 +26,11 @@ namespace MagicStorage
 			{
 				throw new Exception("Magic storage requires a tModLoader version of at least " + requiredVersion);
 			}
+
+			IL.Terraria.Player.QuickStackAllChests += QuickStackAll.InsertQuickStackAllChestsPatch;
+			On.Terraria.Chest.PutItemInNearbyChest += QuickStackAll.PutItemInNearbyChest;
+			On.Terraria.Chest.ServerPlaceItem += QuickStackAll.ServerPlaceItem;
+
 			Instance = this;
 			InterfaceHelper.Initialize();
 			legendMod = ModLoader.GetMod("LegendOfTerraria3");
