@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BD64A8F-72F9-4449-8CD1-61C0801AEBA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MagicStorage</RootNamespace>
+    <AssemblyName>MagicStorage</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fNbt, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\fNbt.0.6.4\lib\net35-client\fNbt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>lib\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReLogic">
+      <HintPath>References\ReLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="RoslynWrapper">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\RoslynWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\ModCompile\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Terraria">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+    <Reference Include="TerrariaHooks">
+      <HintPath>lib\TerrariaHooks.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlankClass.cs" />
+    <Compile Include="BlockRecipes.cs" />
+    <Compile Include="Components\CraftingAccess.cs" />
+    <Compile Include="Components\CreativeStorageUnit.cs" />
+    <Compile Include="Components\RemoteAccess.cs" />
+    <Compile Include="Components\StorageAccess.cs" />
+    <Compile Include="Components\StorageComponent.cs" />
+    <Compile Include="Components\StorageConnector.cs" />
+    <Compile Include="Components\StorageHeart.cs" />
+    <Compile Include="Components\StorageUnit.cs" />
+    <Compile Include="Components\TEAbstractStorageUnit.cs" />
+    <Compile Include="Components\TECraftingAccess.cs" />
+    <Compile Include="Components\TECreativeStorageUnit.cs" />
+    <Compile Include="Components\TERemoteAccess.cs" />
+    <Compile Include="Components\TEStorageCenter.cs" />
+    <Compile Include="Components\TEStorageComponent.cs" />
+    <Compile Include="Components\TEStorageHeart.cs" />
+    <Compile Include="Components\TEStoragePoint.cs" />
+    <Compile Include="Components\TEStorageUnit.cs" />
+    <Compile Include="CraftingGUI.cs" />
+    <Compile Include="InterfaceHelper.cs" />
+    <Compile Include="ItemData.cs" />
+    <Compile Include="Items\CraftingAccess.cs" />
+    <Compile Include="Items\CreativeStorageUnit.cs" />
+    <Compile Include="Items\Locator.cs" />
+    <Compile Include="Items\LocatorDisk.cs" />
+    <Compile Include="Items\PortableAccess.cs" />
+    <Compile Include="Items\RadiantJewel.cs" />
+    <Compile Include="Items\RadiantJewelBag.cs" />
+    <Compile Include="Items\RadiantJewelDrop.cs" />
+    <Compile Include="Items\RemoteAccess.cs" />
+    <Compile Include="Items\ShadowDiamond.cs" />
+    <Compile Include="Items\ShadowDiamondDrop.cs" />
+    <Compile Include="Items\SnowBiomeEmulator.cs" />
+    <Compile Include="Items\StorageAccess.cs" />
+    <Compile Include="Items\StorageComponent.cs" />
+    <Compile Include="Items\StorageConnector.cs" />
+    <Compile Include="Items\StorageDeactivator.cs" />
+    <Compile Include="Items\StorageHeart.cs" />
+    <Compile Include="Items\StorageUnit.cs" />
+    <Compile Include="Items\StorageUnitBlueChlorophyte.cs" />
+    <Compile Include="Items\StorageUnitCrimtane.cs" />
+    <Compile Include="Items\StorageUnitDemonite.cs" />
+    <Compile Include="Items\StorageUnitHallowed.cs" />
+    <Compile Include="Items\StorageUnitHellstone.cs" />
+    <Compile Include="Items\StorageUnitLuminite.cs" />
+    <Compile Include="Items\StorageUnitTerra.cs" />
+    <Compile Include="Items\StorageUnitTiny.cs" />
+    <Compile Include="Items\UpgradeBlueChlorophyte.cs" />
+    <Compile Include="Items\UpgradeCrimtane.cs" />
+    <Compile Include="Items\UpgradeDemonite.cs" />
+    <Compile Include="Items\UpgradeHallowed.cs" />
+    <Compile Include="Items\UpgradeHellstone.cs" />
+    <Compile Include="Items\UpgradeLuminite.cs" />
+    <Compile Include="Items\UpgradeTerra.cs" />
+    <Compile Include="MagicStorage.cs" />
+    <Compile Include="NetHelper.cs" />
+    <Compile Include="QuickStackAll.cs" />
+    <Compile Include="Sorting\BTree.cs" />
+    <Compile Include="Sorting\CompareFunction.cs" />
+    <Compile Include="Sorting\DefaultSorting.cs" />
+    <Compile Include="Sorting\FilterMode.cs" />
+    <Compile Include="Sorting\ItemFilter.cs" />
+    <Compile Include="Sorting\ItemSorter.cs" />
+    <Compile Include="Sorting\SortMode.cs" />
+    <Compile Include="StorageGUI.cs" />
+    <Compile Include="StoragePlayer.cs" />
+    <Compile Include="StorageWorld.cs" />
+    <Compile Include="UIButtonChoice.cs" />
+    <Compile Include="UISearchBar.cs" />
+    <Compile Include="UISlotZone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OldArt\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"D:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(SolutionDir)..\$(ProjectName)" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
